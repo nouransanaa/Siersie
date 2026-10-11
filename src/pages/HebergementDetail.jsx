@@ -3,6 +3,7 @@ import { useParams, NavLink } from "react-router-dom";
 
 import accommodations from "../data/accommodations";
 
+import ContactModal from "../components/contact/ContactModal";
 import NavBar from "../components/layout/NavBar";
 
 import {
@@ -31,6 +32,13 @@ function HebergementDetail() {
   // =========================
 
   const [currentImage, setCurrentImage] = useState(0);
+
+
+  // =========================
+  // MODAL DE CONTACT
+  // =========================
+
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
 
   // =========================
@@ -457,11 +465,20 @@ function HebergementDetail() {
               / nuit
             </span>
 
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => setIsContactModalOpen(true)}
+            >
               Contacter
             </button>
 
-          </aside> 
+          </aside>
+
+          <ContactModal
+            isOpen={isContactModalOpen}
+            onClose={() => setIsContactModalOpen(false)}
+            accommodation={accommodation}
+          />
 
 
         </section>

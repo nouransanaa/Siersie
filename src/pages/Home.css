@@ -252,14 +252,27 @@
   text-align: left;
 }
 
-.select-input span {
+.select-input select {
+  width: 100%;
+
+  border: none;
+  outline: none;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  color: var(--color-brown);
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
+
+  cursor: pointer;
 }
 
 .select-arrow {
   margin-left: auto;
   color: #999 !important;
+  pointer-events: none;
 }
 
 /* =========================

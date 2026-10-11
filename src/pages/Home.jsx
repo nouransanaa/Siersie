@@ -56,20 +56,26 @@ function Home() {
 
               <label>TYPE D'HÉBERGEMENT</label>
 
-              <button
-                type="button"
-                className="search-input select-input"
-              >
+              <div className="search-input select-input">
                 <Building2 size={21} strokeWidth={1.8} />
 
-                <span>Tous les types</span>
+                <select defaultValue="">
+                  <option value="">Tous les types</option>
+                  <option value="Auberge">Auberge</option>
+                  <option value="Gîte">Gîte</option>
+                  <option value="Maison d'hôtes">Maison d'hôtes</option>
+                  <option value="Riad">Riad</option>
+                  <option value="Dar">Dar</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Hôtel">Hôtel</option>
+                </select>
 
                 <ChevronDown
                   className="select-arrow"
                   size={19}
                   strokeWidth={1.7}
                 />
-              </button>
+              </div>
 
             </div>
 
