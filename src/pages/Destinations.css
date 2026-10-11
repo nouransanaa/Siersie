@@ -1,0 +1,336 @@
+/* =========================
+   DESTINATIONS PAGE
+   ========================= */
+
+.destinations-page {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+/* =========================
+   INTRO
+   ========================= */
+
+.destinations-intro {
+  padding: 70px 0 68px;
+
+  border-bottom: 1px solid #eadfd2;
+}
+
+.destinations-eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--color-primary);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.destinations-intro h1 {
+  margin-bottom: 12px;
+
+  color: var(--color-brown);
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(48px, 5vw, 64px);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.destinations-intro p {
+  max-width: 850px;
+
+  color: #756e68;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.55;
+}
+
+/* =========================
+   DESTINATION LIST
+   ========================= */
+
+.destinations-list {
+  padding: 50px 0 75px;
+}
+
+/* =========================
+   GRID
+   ========================= */
+
+.destinations-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================
+   CARD
+   ========================= */
+
+.destination-card {
+  position: relative;
+
+  height: 315px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-radius: 19px;
+
+  background-size: cover;
+  background-position: center;
+
+  isolation: isolate;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 35px rgba(45, 41, 38, 0.17);
+}
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.destination-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(20, 18, 16, 0.02) 20%,
+      rgba(20, 18, 16, 0.18) 45%,
+      rgba(20, 18, 16, 0.78) 100%
+    );
+}
+
+/* =========================
+   CARD CONTENT
+   ========================= */
+
+.destination-card-content {
+  width: 100%;
+
+  padding: 25px 25px 23px;
+
+  color: white;
+}
+
+.destination-location {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 7px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.destination-location svg {
+  flex-shrink: 0;
+}
+
+.destination-card h2 {
+  margin-bottom: 5px;
+
+  color: white;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+.destination-card-content > p {
+  min-height: 44px;
+
+  margin-bottom: 17px;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+}
+
+/* =========================
+   CARD FOOTER
+   ========================= */
+
+.destination-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+}
+
+.destination-card-footer a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+.destination-card-footer a svg {
+  transition: transform 0.25s ease;
+}
+
+.destination-card-footer a:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* =========================
+   TABLET SMALL
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .destinations-intro {
+    padding: 55px 0;
+  }
+
+  .destinations-intro h1 {
+    font-size: 48px;
+  }
+
+  .destinations-intro p {
+    font-size: 17px;
+  }
+
+  .destinations-list {
+    padding-top: 35px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .destinations-intro {
+    padding: 45px 0 42px;
+  }
+
+  .destinations-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+  .destinations-intro h1 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+  .destinations-intro p {
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .destinations-list {
+    padding: 28px 0 55px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .destination-card {
+    height: 330px;
+
+    border-radius: 17px;
+  }
+
+  .destination-card-content {
+    padding: 23px 21px 21px;
+  }
+
+  .destination-card h2 {
+    font-size: 29px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 380px) {
+
+  .destination-card {
+    height: 310px;
+  }
+
+}

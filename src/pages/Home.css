@@ -1,0 +1,454 @@
+/* =========================
+   HOME
+   ========================= */
+
+.home {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  position: relative;
+
+  min-height: calc(100vh - 104px);
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: stretch;
+}
+
+/* =========================
+   HERO IMAGE
+   ========================= */
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../assets/images/home-hero.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  transform: scale(1.01);
+}
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 24, 20, 0.68) 0%,
+      rgba(28, 24, 20, 0.42) 40%,
+      rgba(28, 24, 20, 0.12) 75%,
+      rgba(28, 24, 20, 0.20) 100%
+    );
+}
+
+/* =========================
+   HERO CONTENT
+   ========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: 55px;
+  padding-bottom: 35px;
+}
+
+/* =========================
+   BADGE
+   ========================= */
+
+.hero-badge {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 20px;
+
+  margin-bottom: 28px;
+
+  border-radius: 30px;
+
+  background-color: rgba(92, 85, 73, 0.75);
+  backdrop-filter: blur(5px);
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.hero-badge-icon {
+  font-size: 15px;
+}
+
+/* =========================
+   TITLE
+   ========================= */
+
+.hero-title {
+  max-width: 720px;
+
+  margin-bottom: 24px;
+
+  color: white;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(52px, 5.4vw, 82px);
+
+  font-weight: 600;
+
+  line-height: 0.94;
+
+  letter-spacing: -3px;
+}
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.hero-description {
+  max-width: 710px;
+
+  margin-bottom: 42px;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 21px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   SEARCH
+   ========================= */
+
+.hero-search {
+  width: min(960px, 100%);
+
+  min-height: 98px;
+
+  display: grid;
+  grid-template-columns: 1.15fr 1.15fr auto;
+  align-items: center;
+
+  padding: 8px;
+
+  border-radius: 55px;
+
+  background-color: rgba(255, 255, 255, 0.96);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   SEARCH FIELDS
+   ========================= */
+
+.search-field {
+  min-height: 76px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 20px;
+}
+
+.search-field + .search-field {
+  border-left: 1px solid #eee6dd;
+}
+
+.search-field label {
+  margin-bottom: 8px;
+
+  color: #817a73;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+.search-input {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  border: none;
+  outline: none;
+
+  background-color: transparent;
+
+  color: var(--color-brown);
+}
+
+.search-input svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.search-input input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--color-brown);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+}
+
+.search-input input::placeholder {
+  color: #aaa39c;
+}
+
+/* =========================
+   SELECT
+   ========================= */
+
+.select-input {
+  position: relative;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.select-input span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+}
+
+.select-arrow {
+  margin-left: auto;
+  color: #999 !important;
+}
+
+/* =========================
+   SEARCH BUTTON
+   ========================= */
+
+.search-button {
+  height: 62px;
+
+  min-width: 208px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  margin-right: 2px;
+
+  border: none;
+  border-radius: 40px;
+
+  background-color: var(--color-primary);
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.search-button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: calc(100vh - 90px);
+  }
+
+  .hero-content {
+    padding-top: 45px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 7vw, 68px);
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  .hero-search {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    padding: 10px;
+  }
+
+  .search-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .search-field + .search-field {
+    border-left: 1px solid #eee6dd;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: calc(100vh - 78px);
+
+    align-items: flex-start;
+  }
+
+  .hero-image {
+    background-position: 58% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(30, 25, 21, 0.40) 0%,
+        rgba(30, 25, 21, 0.62) 45%,
+        rgba(30, 25, 21, 0.78) 100%
+      );
+  }
+
+  .hero-content {
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+
+  .hero-badge {
+    margin-bottom: 22px;
+
+    padding: 8px 15px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-title {
+    max-width: 100%;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(42px, 12vw, 58px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    margin-bottom: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+  }
+
+  /* Search becomes vertical */
+  .hero-search {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 9px;
+
+    border-radius: 26px;
+  }
+
+  .search-field {
+    min-height: 72px;
+
+    padding: 7px 15px;
+  }
+
+  .search-field + .search-field {
+    border-left: none;
+    border-top: 1px solid #eee6dd;
+  }
+
+  .search-button {
+    width: 100%;
+    height: 57px;
+
+    min-width: 0;
+
+    margin: 5px 0 0;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 380px) {
+
+  .hero-content {
+    padding-top: 50px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}

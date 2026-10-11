@@ -1,0 +1,353 @@
+/* =========================
+   PAGE
+========================= */
+
+.hebergements-page {
+  min-height: 100vh;
+
+  background-color: #fff9f0;
+
+  color: #3c3028;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hebergements-hero {
+  border-bottom: 1px solid #eadfd2;
+
+  padding: 70px 35px 70px;
+}
+
+.hero-content {
+  max-width: 1350px;
+
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  color: #c65d3a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 48px;
+
+  line-height: 1.1;
+
+  margin: 0 0 15px;
+
+  color: #2f251f;
+}
+
+.hero-description {
+  font-size: 18px;
+
+  color: #766b62;
+
+  margin-bottom: 32px;
+}
+
+
+/* =========================
+   RECHERCHE
+========================= */
+
+.search-box {
+  display: flex;
+
+  gap: 10px;
+
+  max-width: 850px;
+}
+
+.search-input-container {
+  flex: 1;
+
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+
+  border: 1px solid #c65d3a;
+
+  border-radius: 30px;
+
+  padding: 0 20px;
+}
+
+.search-icon {
+  color: #8d847c;
+
+  font-size: 24px;
+
+  margin-right: 10px;
+}
+
+.search-input-container input {
+  border: none;
+
+  outline: none;
+
+  width: 100%;
+
+  font-size: 16px;
+
+  background: transparent;
+}
+
+.search-button {
+  height: 56px;
+
+  padding: 0 32px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background-color: #c65d3a;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #ad4f31;
+}
+
+
+/* =========================
+   SECTION LOGEMENTS
+========================= */
+
+.accommodations-section {
+  padding: 48px 35px;
+}
+
+.accommodations-layout {
+  max-width: 1350px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 320px 1fr;
+
+  gap: 35px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   RESULTATS
+========================= */
+
+.results-container {
+  min-width: 0;
+}
+
+.results-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+.results-header p {
+  margin: 0;
+
+  font-size: 17px;
+
+  color: #766b62;
+}
+
+.results-header strong {
+  color: #3c3028;
+}
+
+
+/* =========================
+   TRI
+========================= */
+
+.sort-select {
+  min-width: 200px;
+
+  height: 52px;
+
+  padding: 0 18px;
+
+  border: 1px solid #ead8c6;
+
+  border-radius: 28px;
+
+  background-color: white;
+
+  color: #3c3028;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.sort-select:focus {
+  outline: none;
+
+  border-color: #c65d3a;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.accommodations-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+
+/* =========================
+   AUCUN RESULTAT
+========================= */
+
+.no-results {
+  background-color: white;
+
+  border: 1px solid #eadfd2;
+
+  border-radius: 20px;
+
+  padding: 60px 30px;
+
+  text-align: center;
+}
+
+.no-results h2 {
+  font-family: "Playfair Display", serif;
+
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: #766b62;
+
+  margin-bottom: 25px;
+}
+
+.no-results button {
+  background-color: #c65d3a;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 25px;
+
+  padding: 12px 22px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .accommodations-layout {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .accommodations-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  .hebergements-hero {
+    padding: 45px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .accommodations-section {
+    padding: 30px 20px;
+  }
+
+  .accommodations-layout {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .results-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+
+  .accommodations-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

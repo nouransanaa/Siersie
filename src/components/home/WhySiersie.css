@@ -1,0 +1,287 @@
+/* =========================
+   SECTION POURQUOI SIERSIE
+========================= */
+
+.why-siersie {
+  width: 100%;
+
+  padding: 90px 32px 85px;
+
+  background: #fff9f0;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.why-header {
+  max-width: 900px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+
+/* Petit titre */
+
+.why-subtitle {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #c65d3a;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+
+/* Grand titre */
+
+.why-header h2 {
+  margin: 0 0 14px;
+
+  color: #241b17;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 44px;
+
+  font-weight: 600;
+
+  line-height: 1.15;
+}
+
+
+/* Description */
+
+.why-header p {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: #806d62;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.why-cards {
+  max-width: 1320px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* =========================
+   CARTE
+========================= */
+
+.why-card {
+  min-height: 340px;
+
+  padding: 40px 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #eadfd2;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Hover */
+
+.why-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #dfc7b7;
+
+  box-shadow:
+    0 15px 35px rgba(91, 61, 43, 0.08);
+}
+
+
+/* =========================
+   ICÔNE
+========================= */
+
+.why-icon {
+  width: 70px;
+
+  height: 70px;
+
+  margin-bottom: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #f9ece8;
+
+  color: #c65d3a;
+
+  font-size: 30px;
+
+  font-family: Georgia, serif;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.why-card:hover .why-icon {
+  background: #c65d3a;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   TITRE CARTE
+========================= */
+
+.why-card h3 {
+  margin: 0 0 18px;
+
+  color: #241b17;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 27px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   TEXTE CARTE
+========================= */
+
+.why-card p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color: #806d62;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .why-siersie {
+    padding: 75px 25px;
+  }
+
+  .why-header h2 {
+    font-size: 38px;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+  }
+
+  .why-card {
+    min-height: 300px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .why-siersie {
+    padding: 60px 20px;
+  }
+
+  .why-subtitle {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+  .why-header {
+    margin-bottom: 40px;
+  }
+
+  .why-header h2 {
+    font-size: 32px;
+  }
+
+  .why-header p {
+    font-size: 15px;
+  }
+
+  .why-card {
+    min-height: 280px;
+
+    padding: 35px 25px;
+  }
+
+  .why-card h3 {
+    font-size: 25px;
+  }
+
+  .why-card p {
+    font-size: 15px;
+  }
+}

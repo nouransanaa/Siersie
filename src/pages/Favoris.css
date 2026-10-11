@@ -1,0 +1,270 @@
+/* =========================
+   PAGE FAVORIS
+========================= */
+
+.favorites-page {
+  min-height: 100vh;
+  background: #fff9f0;
+  color: #35261e;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.favorites-header {
+  padding: 70px 32px;
+  border-bottom: 1px solid #eadfD2;
+}
+
+
+.favorites-subtitle {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #c65d3a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+.favorites-header h1 {
+  margin: 0 0 12px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 46px;
+  line-height: 1.1;
+
+  color: #2f211a;
+}
+
+
+.favorites-header p {
+  margin: 0;
+
+  font-size: 18px;
+
+  color: #75685f;
+}
+
+
+.favorites-count {
+  margin-top: 20px;
+
+  color: #68724d;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.favorites-content {
+  padding: 50px 32px 80px;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.favorites-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+.favorite-item {
+  width: 100%;
+}
+
+
+/* =========================
+   ÉTAT VIDE
+========================= */
+
+.favorites-empty {
+
+  min-height: 420px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #fcf7ef;
+
+  border-radius: 24px;
+
+  padding: 50px 20px;
+}
+
+
+/* COEUR */
+
+.empty-heart {
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: #f4e7d3;
+
+  color: #a99b8c;
+
+  font-size: 58px;
+}
+
+
+.favorites-empty h2 {
+
+  margin: 0 0 12px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+
+  color: #35261e;
+}
+
+
+.favorites-empty p {
+
+  margin: 0 0 30px;
+
+  color: #75685f;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+.discover-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 13px 22px;
+
+  border-radius: 30px;
+
+  background: #c65d3a;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+
+.discover-button:hover {
+
+  background: #ae4e30;
+
+}
+
+
+.discover-button span {
+
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .favorites-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .favorites-header {
+
+    padding: 50px 20px;
+
+  }
+
+
+  .favorites-header h1 {
+
+    font-size: 34px;
+
+  }
+
+
+  .favorites-header p {
+
+    font-size: 16px;
+
+  }
+
+
+  .favorites-content {
+
+    padding: 30px 20px 60px;
+
+  }
+
+
+  .favorites-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}

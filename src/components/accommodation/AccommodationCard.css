@@ -1,0 +1,186 @@
+.accommodation-card {
+  background-color: white;
+  border: 1px solid #eadfD2;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(70, 50, 35, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accommodation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(70, 50, 35, 0.12);
+}
+
+/* IMAGE */
+
+.card-image {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BADGE */
+
+.accommodation-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  background-color: #68724d;
+  color: white;
+
+  padding: 7px 14px;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* FAVORI */
+
+.favorite-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: white;
+  color: #756b62;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.favorite-button:hover {
+  background-color: #fff9f0;
+}
+
+.favorite-active {
+  color: #c65d3a;
+}
+
+/* CONTENU */
+
+.card-content {
+  padding: 22px 25px;
+}
+
+/* TITRE */
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title-row h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+
+  color: #3c3028;
+}
+
+.rating {
+  color: #756b62;
+  white-space: nowrap;
+}
+
+.rating:first-letter {
+  color: #c65d3a;
+}
+
+/* LOCATION */
+
+.location {
+  color: #8a8179;
+  margin: 12px 0;
+
+  font-size: 15px;
+}
+
+.location span {
+  color: #c65d3a;
+  margin-right: 7px;
+}
+
+/* DESCRIPTION */
+
+.description {
+  color: #7b726a;
+  line-height: 1.6;
+
+  min-height: 48px;
+
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+.card-footer {
+  border-top: 1px solid #eee3d8;
+
+  padding-top: 17px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  margin: 0;
+  color: #8a8179;
+}
+
+.price strong {
+  color: #3c3028;
+  font-size: 17px;
+}
+
+.card-footer a {
+  color: #c65d3a;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .card-image {
+    height: 220px;
+  }
+
+  .card-content {
+    padding: 18px;
+  }
+
+  .card-title-row h2 {
+    font-size: 20px;
+  }
+
+  .card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
